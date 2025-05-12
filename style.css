@@ -96,8 +96,8 @@ section {
   
 .project {
     position: relative;
-    width: 500px;
-    height: 500px;
+    width: 0.4vh;
+    height: 0.4vh;
     border: 1px solid #2A2A2A;
     overflow: hidden;
 }
