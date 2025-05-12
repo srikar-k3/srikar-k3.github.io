@@ -1,0 +1,31 @@
+.eink-refresh {
+    transition: background-color 0.2s, color 0.2s;
+    background-color: #2A2A2A !important;
+    color: #EDEBE5 !important;
+}
+  
+  .eink-transitioning * {
+    transition: none !important;
+}
+
+/* Style for the E-Ink toggle button */
+.toggle-eink-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px solid #2A2A2A;
+    background-color: #EDEBE5;
+    color: #2A2A2A;
+    border: none;
+    font-size: 1rem;
+    font-family: 'AmazonEmberDisplay', sans-serif;
+    cursor: pointer;
+}
+
+.toggle-eink-btn:focus {
+    outline: none;
+}
