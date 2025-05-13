@@ -96,3 +96,11 @@ document.addEventListener("keydown", (e) => {
     }, 50);
   }
 });
+
+
+const iframe = document.querySelector('.mockup-iframe');
+window.addEventListener('scroll', () => {
+    // Adjust scroll speed to match your design
+    const scrollAmount = window.scrollY * 0.5; 
+    iframe.style.transform = `translateY(-${scrollAmount}px)`;
+});

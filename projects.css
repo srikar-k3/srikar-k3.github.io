@@ -1,0 +1,7 @@
+.main-image {
+    width: 100%;            /* maintain aspect ratio */
+    height: auto;           /* let height scale naturally */
+    max-height: 100vh;      /* limit how tall it gets */
+    object-fit: cover;      /* crop top/bottom to fill width */
+    display: block;
+  }
