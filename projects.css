@@ -4,13 +4,13 @@
     padding: 0 0;
 }
 
-.image-row {
+.row-scroll {
     display: flex;
     animation: scroll 30s linear infinite;
     width: max-content;
 }
 
-.image-swap {
+.image-swap-apps {
     position: relative;
     height: 24vh;
     width: 24vw;
@@ -19,11 +19,11 @@
     margin: 0 -5rem;
 }
   
-.image-swap:hover {
+.image-swap-apps:hover {
     transform: scale(1.25);
 }
   
-.image-swap img {
+.image-swap-apps img {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -37,11 +37,11 @@
     opacity: 0;
 }
   
-.image-swap:hover .hover-img {
+.image-swap-apps:hover .hover-img {
     opacity: 1;
 }
   
-.image-swap:hover .default-img {
+.image-swap-apps:hover .default-img {
     opacity: 0;
 }
   
@@ -71,7 +71,7 @@
     object-fit: cover;     
     transition: transform 1.0s ease;
     will-change: transform;
-  }
+}
 
 .image {
     width: 100%;           
@@ -80,7 +80,7 @@
     object-fit: cover;     
     transition: transform 1.0s ease;
     will-change: transform;
-  }
+}
 
 p1 {
     font-size: 1.6rem;
