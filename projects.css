@@ -1,9 +1,85 @@
+.scroll-container {
+    overflow: hidden;
+    width: 100%;
+    padding: 0 0;
+}
+
+.image-row {
+    display: flex;
+    animation: scroll 30s linear infinite;
+    width: max-content;
+}
+
+.image-swap {
+    position: relative;
+    height: 24vh;
+    width: 24vw;
+    display: inline-block;
+    transition: transform 0.5s ease;
+    margin: 0 -5rem;
+}
+  
+.image-swap:hover {
+    transform: scale(1.25);
+}
+  
+.image-swap img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease;
+    object-fit: contain;
+}
+  
+.hover-img {
+    opacity: 0;
+}
+  
+.image-swap:hover .hover-img {
+    opacity: 1;
+}
+  
+.image-swap:hover .default-img {
+    opacity: 0;
+}
+  
+@keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+}
+
+/*----------------------------------*/
+
+.image-container {
+    width: 100%;
+    height: auto;
+    max-height: 95vh;
+    overflow: hidden;
+    position: relative;
+}
+
 .main-image {
-    width: 100%;            /* maintain aspect ratio */
-    height: auto;           /* let height scale naturally */
-    max-height: 95vh;      /* limit how tall it gets */
-    object-fit: cover;      /* crop top/bottom to fill width */
-    display: block;
+    width: 100%;            
+    height: auto;          
+    max-height: 95vh;      
+    object-fit: cover;     
+    transition: transform 1.0s ease;
+    will-change: transform;
+  }
+
+.image {
+    width: 100%;           
+    height: auto;         
+    max-height: 95vh;      
+    object-fit: cover;     
+    transition: transform 1.0s ease;
+    will-change: transform;
   }
 
 p1 {
@@ -12,12 +88,12 @@ p1 {
 
 .image-row {
     display: flex;
-    justify-content: center;   /* center them in the container */
-    gap: 0;                 /* space between the images */
+    justify-content: center;   
+    gap: 0.5vh;                 
 }
   
 .side-image {
-    width: 50%;              /* or any fixed %, like 45% */
-    height: auto;              /* maintain aspect ratio */
-    object-fit: cover;         /* ensures fill without distortion */
+    width: 50%;              
+    height: auto;              
+    object-fit: cover;    
 }

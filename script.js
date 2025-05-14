@@ -100,7 +100,21 @@ document.addEventListener("keydown", (e) => {
 
 const iframe = document.querySelector('.mockup-iframe');
 window.addEventListener('scroll', () => {
-    // Adjust scroll speed to match your design
     const scrollAmount = window.scrollY * 0.5; 
     iframe.style.transform = `translateY(-${scrollAmount}px)`;
+});
+
+let lastScrollTop = 0;
+const image = document.querySelector('.main-image');
+
+window.addEventListener('scroll', function () {
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+  if (scrollTop > lastScrollTop) {
+    image.style.transform = 'scale(1.05)';
+  } else {
+    image.style.transform = 'scale(1)';
+  }
+
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
