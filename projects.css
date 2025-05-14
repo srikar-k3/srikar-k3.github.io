@@ -1,7 +1,23 @@
 .main-image {
     width: 100%;            /* maintain aspect ratio */
     height: auto;           /* let height scale naturally */
-    max-height: 100vh;      /* limit how tall it gets */
+    max-height: 95vh;      /* limit how tall it gets */
     object-fit: cover;      /* crop top/bottom to fill width */
     display: block;
   }
+
+p1 {
+    font-size: 1.6rem;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;   /* center them in the container */
+    gap: 0;                 /* space between the images */
+}
+  
+.side-image {
+    width: 50%;              /* or any fixed %, like 45% */
+    height: auto;              /* maintain aspect ratio */
+    object-fit: cover;         /* ensures fill without distortion */
+}
