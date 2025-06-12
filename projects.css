@@ -1,22 +1,28 @@
 .scroll-container {
     overflow: hidden;
+    position: relative;
     width: 100%;
-    padding: 0 0;
+    max-width: 90vw;
+    padding: 0;
+    flex-shrink: 0;
+
 }
 
 .row-scroll {
     display: flex;
-    animation: scroll 30s linear infinite;
-    width: max-content;
+    animation: scroll 20s linear infinite;
+    width: fit-content;
+    gap: 1rem;
 }
 
 .image-swap-apps {
     position: relative;
-    height: 24vh;
-    width: 24vw;
+    height: 16vh;
+    width: 16vw;
     display: inline-block;
     transition: transform 0.5s ease;
-    margin: 0 -5rem;
+    margin: 4vh 0;
+    flex-shrink: 0;
 }
   
 .image-swap-apps:hover {
